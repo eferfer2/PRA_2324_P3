@@ -8,8 +8,8 @@ bin/testHashTable: testHashtable.cpp HashTable.h
 
 bin/testBSTree: testBSTree.cpp BSTree.h
 	g++ -o bin/testBSTree testBSTree.cpp
-bin/testBSTreeDict: testBSTreeDict.cpp BSTreeDict.h
-	g++ -o bin/testBSTreeDict testBSTreeDict.cpp
+bin/testBSTreeDict: testBSTreeDict.cpp BSTreeDict.h TableEntry.h BSNode.h
+	g++ -o bin/testBSTreeDict testBSTreeDict.cpp TableEntry.h
 
 clean:
 	rm -rf *.o *.gch bin

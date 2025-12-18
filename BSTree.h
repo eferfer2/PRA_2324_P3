@@ -51,6 +51,14 @@ class BSTree{
             return n;
         }
 
+        void print_inorder(ostream &out, BSNode<T>* n) const{
+            if (n != nullptr){
+                print_inorder(out, n->left);
+                out << n->elem << " ";
+                print_inorder(out, n->right);
+            }
+        }
+
 
         T max(BSNode<T>* n) const{
             if (n == nullptr){
@@ -124,7 +132,7 @@ class BSTree{
         //Busqueda de elementos
         T search(T e) const{
 
-            BSNode<T> node=search(root, e);
+            BSNode<T> *node=search(root, e);
 
             return node->elem;
         }
